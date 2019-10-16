@@ -4,3 +4,7 @@ terraform {
 }
 
 data "aws_region" "current" {}
+
+resource "aws_vpc" "main" {
+  cidr_block = var.vpc_cidr_range
+}
